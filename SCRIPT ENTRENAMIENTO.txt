@@ -1,0 +1,155 @@
+!pip install mysql-connector-python
+
+import mysql.connector
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import classification_report, accuracy_score
+import joblib
+
+#----------------------
+import os
+import json
+#----------------------
+
+
+# Configura los datos de conexión a la base de datos OTRS
+config = {
+    'user': 'otrs_user',
+    'password': 'passwd',
+    'host': '20.102.112.53',  # Asegúrate de que esta IP es accesible desde Databricks
+    'database': 'otrs',
+    'port': 3306,  # Puerto por defecto de MySQL
+}
+
+#guardar----------------------
+# Define un archivo temporal en DBFS para almacenar los resultados
+temp_file_path = "/dbfs/tmp/entrenamiento_resultado_temp.log"
+if os.path.exists(temp_file_path):
+    os.remove(temp_file_path)
+    print(f"Archivo temporal eliminado: {temp_file_path}")
+#guardar----------------------
+
+
+
+try:
+    # Crea una conexión a la base de datos OTRS
+    connection = mysql.connector.connect(**config)
+
+    # Comprueba si la conexión se ha establecido
+    if connection.is_connected():
+        print("Conexión establecida a la base de datos OTRS")
+
+        # Consulta SQL para extraer los datos de entrenamiento (excluyendo "machine learning")
+        cursor = connection.cursor(dictionary=True)
+        cursor.execute("""
+            SELECT queue.name AS queue_name, REPLACE(article_data_mime.a_body, '\\n', ' ') AS article_body
+            FROM queue
+            JOIN ticket ON queue.id = ticket.queue_id
+            JOIN article ON ticket.id = article.ticket_id
+            JOIN article_data_mime ON article.id = article_data_mime.article_id
+            WHERE queue.name != 'machine learning'
+        """)
+
+        data = cursor.fetchall()
+        df_train = pd.DataFrame(data)
+
+        # Ajusta el vectorizador TF-IDF con los datos de entrenamiento
+        vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
+        X_train = df_train['article_body']
+        y_train = df_train['queue_name']
+        X_train_tfidf = vectorizer.fit_transform(X_train)
+
+        # Entrena un modelo de clasificación (en este ejemplo, MultinomialNB)
+        clf = MultinomialNB()
+        clf.fit(X_train_tfidf, y_train)
+
+        # Verifica si los directorios existen antes de guardar los archivos
+        dbutils.fs.mkdirs("/models")
+        
+        # Guarda el modelo entrenado y el vectorizador en DBFS
+        model_path = "/dbfs/models/modelo_clasificacion.pkl"
+        vectorizer_path = "/dbfs/models/vectorizador_tfidf.pkl"
+        joblib.dump(clf, model_path)
+        joblib.dump(vectorizer, vectorizer_path)
+
+        # Verificar si los archivos fueron guardados correctamente
+        print("Archivos guardados en /models/:")
+        files = dbutils.fs.ls("/models/")
+        for file in files:
+            print(file)
+
+        # Realizar predicciones en los datos de entrenamiento
+        y_pred = clf.predict(X_train_tfidf)
+
+        # Las predicciones serán etiquetas numéricas, puedes mapearlas nuevamente a etiquetas de área
+        print("Informe de clasificación en datos de entrenamiento:")
+        report = classification_report(y_train, y_pred)
+        accuracy = accuracy_score(y_train, y_pred)
+        print(report)
+        print("Exactitud en datos de entrenamiento:", accuracy)
+
+
+
+
+
+
+    #---------------------- Guardar resultados con fecha y hora ----------------------
+    import datetime
+    from datetime import timedelta
+
+    # Obtener la fecha y hora actuales y restar 5 horas
+    current_time = (datetime.datetime.now() - timedelta(hours=5)).strftime("%Y-%m-%d %H:%M:%S")
+
+    try:
+        # Guardar los resultados en el archivo temporal
+        results = {
+            "timestamp": current_time,  # Fecha y hora de ejecución ajustada
+            "accuracy": accuracy,
+            "classification_report": classification_report(y_train, y_pred, output_dict=True)  # Salida estructurada del reporte
+        }
+        with open(temp_file_path, "w") as file:
+            json.dump(results, file, indent=4)
+        print(f"Resultados de la ejecución actual guardados en: {temp_file_path}")
+
+        # Leer y mostrar los resultados del archivo temporal
+        try:
+            with open(temp_file_path, "r") as file:
+                saved_results = json.load(file)
+                print("\n--- Resultados Guardados ---")
+                print(f"Fecha y Hora de Ejecución: {saved_results['timestamp']}")
+                print(f"Exactitud del modelo: {saved_results['accuracy']:.4f}\n")
+                print("--- Informe de Clasificación ---")
+
+                # Reestructuración de la salida: primero las métricas, luego las etiquetas
+                metrics_names = ["precision", "recall", "f1-score", "support"]
+                for metric in metrics_names:
+                    print(f"{metric.capitalize()}:")
+                    for label, metrics in saved_results['classification_report'].items():
+                        if isinstance(metrics, dict):  # Verifica si el valor es un diccionario
+                            print(f"  {label}: {metrics.get(metric, 0):.4f}")
+                    print("")  # Línea en blanco para separar métricas
+
+                print("\n--- Fin del Informe ---")
+        except Exception as read_error:
+            print(f"Advertencia: No se pudo leer el archivo temporal. Error: {read_error}")
+
+    except Exception as write_error:
+        print(f"Advertencia: No se pudo guardar el archivo temporal. Error: {write_error}")
+    #---------------------- Fin de Guardar resultados con fecha y hora ----------------------
+
+
+
+
+
+
+        
+
+except mysql.connector.Error as error:
+    print(f"Error al conectar a la base de datos: {error}")
+finally:
+    # Cierra la conexión cuando hayas terminado de usarla
+    if connection.is_connected():
+        connection.close()
+        print("Conexión cerrada")
+        

@@ -1,0 +1,188 @@
+!pip install mysql-connector-python
+
+import time
+import mysql.connector
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+import joblib
+
+#----------------------
+import os
+import json
+#----------------------
+
+
+
+# Inicia el cronómetro para el script completo
+start_time_total = time.time()
+
+# Configura los datos de conexión a la base de datos OTRS
+config = {
+    'user': 'otrs_user',
+    'password': 'passwd',
+    'host': '20.102.112.53',
+    'database': 'otrs',
+    'port': 3306,
+}
+
+try:
+    # Crea una conexión a la base de datos OTRS
+    connection = mysql.connector.connect(**config)
+
+    # Comprueba si la conexión se ha establecido
+    if connection.is_connected():
+        print("Conexión establecida a la base de datos OTRS")
+
+        # Consulta SQL para extraer los datos de Machine Learning incluyendo el ID del ticket
+        cursor = connection.cursor(dictionary=True)
+        cursor.execute(
+            "SELECT ticket.id AS ticket_id, REPLACE(article_data_mime.a_body, '\\n', ' ') AS article_body "
+            "FROM ticket "
+            "JOIN article ON ticket.id = article.ticket_id "
+            "JOIN article_data_mime ON article.id = article_data_mime.article_id "
+            "WHERE ticket.queue_id = (SELECT id FROM queue WHERE name = 'machine learning')"
+        )
+
+        data = cursor.fetchall()
+        
+        # Verificar si se han obtenido datos
+        if data:
+            df_machine_learning = pd.DataFrame(data)
+
+            # Verificar si la columna 'article_body' está presente
+            if 'article_body' in df_machine_learning.columns:
+                # Cargar el modelo entrenado y el vectorizador desde DBFS
+                clf = joblib.load('/dbfs/models/modelo_clasificacion.pkl')
+                vectorizer = joblib.load('/dbfs/models/vectorizador_tfidf.pkl')
+
+                # Inicia el cronómetro para la predicción
+                start_pred = time.time()
+
+                # Transformar y realizar predicciones
+                X_machine_learning_tfidf = vectorizer.transform(df_machine_learning['article_body'])
+                predicciones = clf.predict(X_machine_learning_tfidf)
+
+                # Finaliza el cronómetro para la predicción
+                end_pred = time.time()
+                # Imprime el tiempo de predicción
+                print(f"Tiempo de predicción: {end_pred - start_pred} segundos")
+
+                # Inicializa un contador
+                contador_predicciones = 0
+
+                # Inicia el cronómetro para la actualización de los tickets
+                start_update = time.time()
+
+                # Actualizar el área de los tickets en la base de datos
+                for i in range(len(predicciones)):
+                    ticket_id = df_machine_learning['ticket_id'][i]
+                    nueva_area = predicciones[i]
+
+                    update_query = (
+                        f"UPDATE ticket "
+                        f"SET queue_id = (SELECT id FROM queue WHERE name = '{nueva_area}') "
+                        f"WHERE id = {ticket_id}"
+                    )
+
+                    cursor.execute(update_query)
+                    connection.commit()
+                    contador_predicciones += 1
+
+                    print(f"Área actualizada para el ticket machine learning con ID {ticket_id} a '{nueva_area}'")
+
+                # Finaliza el cronómetro para la actualización
+                end_update = time.time()
+                # Imprime el tiempo de actualización
+                print(f"Tiempo de actualización de los tickets: {end_update - start_update} segundos")
+
+                # Imprime el número total de predicciones realizadas
+                print(f"Total de predicciones realizadas: {contador_predicciones}")
+            else:
+                print("La columna 'article_body' no está presente en los datos obtenidos")
+        else:
+            print("No se encontraron tickets, Revisa que haya tickets en el area machine learning.")
+
+
+
+
+
+
+
+except mysql.connector.Error as error:
+    print(f"Error al conectar a la base de datos: {error}")
+finally:
+    # Cierra la conexión cuando hayas terminado de usarla
+    if connection.is_connected():
+        connection.close()
+        print("Conexión cerrada")
+
+# Finaliza el cronómetro para el script completo
+end_time_total = time.time()
+# Imprime la duración total del script
+print(f"Duración total del script: {end_time_total - start_time_total} segundos")
+
+
+
+
+#guardar----------------------
+import datetime
+from datetime import timedelta
+
+# Obtener la fecha y hora actuales y restar 5 horas
+current_time = (datetime.datetime.now() - timedelta(hours=5)).strftime("%Y-%m-%d %H:%M:%S")
+
+
+# Define un archivo temporal en DBFS para almacenar los resultados
+temp_file_path = "/dbfs/tmp/entrenamiento_resultado_temp.log"
+if os.path.exists(temp_file_path):
+    os.remove(temp_file_path)
+    print(f"Archivo temporal eliminado: {temp_file_path}")
+
+# Inicializa un diccionario para almacenar resultados y mensajes
+results = {
+    "total_duration": None,
+    "prediction_time": None,
+    "update_time": None,
+    "total_predictions": 0,
+    "error": None,
+    "message": None
+}
+
+try:
+    results["timestamp"] = current_time  # Fecha y hora de ejecución ajustada
+    # Almacenar la duración total del script y los tiempos de proceso si no hubo errores
+    results["total_duration"] = round(end_time_total - start_time_total, 2)
+    results["prediction_time"] = round(tiempo_prediccion, 2)
+    results["update_time"] = round(tiempo_actualizacion, 2)
+    results["total_predictions"] = contador_predicciones
+except NameError as var_error:
+    # Si alguna variable no existe (por ejemplo, no hubo tickets), almacena un mensaje de error
+    results["error"] = f"Error: {var_error}"
+    results["message"] = "No se encontraron tickets, Revisa que haya tickets en el area machine learning."
+
+# Intentar guardar los resultados (incluyendo errores o mensajes) en el archivo temporal
+try:
+    with open(temp_file_path, "w") as file:
+        json.dump(results, file, indent=4)
+    print(f"Resultados guardados en: {temp_file_path}")
+
+    # Leer y mostrar los resultados desde el archivo temporal
+    with open(temp_file_path, "r") as file:
+        saved_results = json.load(file)
+        if saved_results.get("error"):
+            print("\n--- Error en el Proceso ---")
+            print(f"Fecha y Hora de Ejecución: {saved_results['timestamp']}")
+            print(saved_results["error"])
+            print(saved_results["message"])
+        else:
+            print("\nDuración total del script: {:.2f} segundos".format(saved_results["total_duration"]))
+            print("\n--- Resultados del Proceso ---")
+            print(f"Tiempo de predicción: {saved_results['prediction_time']} segundos")
+            print(f"Tiempo de actualización de tickets: {saved_results['update_time']} segundos")
+            print(f"Total de predicciones realizadas: {saved_results['total_predictions']}")
+except Exception as error:
+    print(f"Error al guardar o leer los resultados: {error}")
+#guardar----------------------
+
+

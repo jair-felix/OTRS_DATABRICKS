@@ -1,0 +1,18 @@
+import joblib
+import pandas as pd
+
+# Cargar el modelo de clasificación entrenado
+modelo = joblib.load('modelo_clasificacion.pkl')
+
+# Cargar el vectorizador TF-IDF previamente ajustado
+vectorizador = joblib.load('vectorizador_tfidf.pkl')
+# Cargar los nuevos datos desde un archivo CSV
+nuevos_datos = pd.read_csv('nuevos_datos.csv')
+X_nuevos = vectorizador.transform(nuevos_datos['Descripción_Problema'])
+predicciones = modelo.predict(X_nuevos)
+
+# Agregar las predicciones al DataFrame de nuevos datos
+nuevos_datos['Departamento_Predicho'] = predicciones
+
+# Mostrar o guardar el DataFrame con las predicciones
+print(nuevos_datos)
