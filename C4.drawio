@@ -1,0 +1,339 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+  <diagram name="Página-1" id="lBQ-VSgEgUDpp0oM3XBg">
+    <mxGraphModel dx="1450" dy="522" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;[Container]&lt;/font&gt;" placeholders="1" name="Backend de OTRS" id="zyepxjSk0z5-UPm8dW1Z-3">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#828282;fillColor=none;fontColor=#404040;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=bottom;dashed=1;strokeWidth=2;perimeterSpacing=0;spacing=4;spacingTop=0;fontSize=10;container=0;rotatable=0;metaEdit=1;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="80" y="1384" width="900" height="180" as="geometry">
+              <mxRectangle x="560" y="40" width="110" height="30" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Software System]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Sistema de Gestión de Tickets" description="Sistema que recibe, clasifica y gestiona los tickets de soporte" id="DlZdcZgpf0tY84U8qavR-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0067BA;fontColor=#FFFFFF;strokeColor=#005DA8;resizable=0;rotatable=0;strokeWidth=2;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="310" y="30" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="DlZdcZgpf0tY84U8qavR-2">
+          <mxCell style="group;resizable=0;rotatable=0;fontColor=#404040;metaEdit=1;" parent="1" vertex="1" connectable="0">
+            <mxGeometry x="90" y="274" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Person]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal; font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Clientes que envían tickets" description="Usuarios que crean tickets de soporte" placeholders="1" id="DlZdcZgpf0tY84U8qavR-3">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#999999;fillColor=#CCCCCC;fontColor=#404040;arcSize=31;rotatable=0;strokeWidth=2;metaEdit=1;" parent="DlZdcZgpf0tY84U8qavR-2" vertex="1">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="DlZdcZgpf0tY84U8qavR-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#999999;fillColor=#CCCCCC;fontColor=#000000;rotatable=0;strokeWidth=2;" parent="DlZdcZgpf0tY84U8qavR-2" vertex="1">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="DlZdcZgpf0tY84U8qavR-5">
+          <mxCell style="group;resizable=0;rotatable=0;fontColor=#404040;metaEdit=1;" parent="1" vertex="1" connectable="0">
+            <mxGeometry x="320" y="274" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Person]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal; font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Usuarios de Soporte" description="Personal que gestiona y resuelve los tickets de soporte" placeholders="1" id="DlZdcZgpf0tY84U8qavR-6">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#999999;fillColor=#CCCCCC;fontColor=#404040;arcSize=31;rotatable=0;strokeWidth=2;metaEdit=1;" parent="DlZdcZgpf0tY84U8qavR-5" vertex="1">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="DlZdcZgpf0tY84U8qavR-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#999999;fillColor=#CCCCCC;fontColor=#000000;rotatable=0;strokeWidth=2;" parent="DlZdcZgpf0tY84U8qavR-5" vertex="1">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="DlZdcZgpf0tY84U8qavR-8">
+          <mxCell style="group;resizable=0;rotatable=0;fontColor=#404040;metaEdit=1;" parent="1" vertex="1" connectable="0">
+            <mxGeometry x="550" y="274" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[System]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal; font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Databricks" description="Plataforma de análisis de datos utilizada para clasificar y priorizar tickets" placeholders="1" id="DlZdcZgpf0tY84U8qavR-9">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#999999;fillColor=#CCCCCC;fontColor=#404040;arcSize=31;rotatable=0;strokeWidth=2;metaEdit=1;" parent="DlZdcZgpf0tY84U8qavR-8" vertex="1">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="DlZdcZgpf0tY84U8qavR-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#999999;fillColor=#CCCCCC;fontColor=#000000;rotatable=0;strokeWidth=2;" parent="DlZdcZgpf0tY84U8qavR-8" vertex="1">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a3cBgtACuQMPNkDMzibO-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="DlZdcZgpf0tY84U8qavR-4" target="DlZdcZgpf0tY84U8qavR-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="200" />
+              <mxPoint x="400" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3cBgtACuQMPNkDMzibO-3" value="Crear Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="a3cBgtACuQMPNkDMzibO-1" vertex="1" connectable="0">
+          <mxGeometry x="-0.7955" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;[Software System]&lt;/font&gt;" placeholders="1" name="Sistema de Gestión de Tickets" id="Kiz3ze_mVOzW_uqPoHn--2">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#828282;fontColor=#404040;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=bottom;strokeWidth=2;perimeterSpacing=0;spacing=4;spacingTop=0;fontSize=10;fillColor=none;dashed=1;rotatable=0;metaEdit=1;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="-256" y="625" width="1060" height="230" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="a3cBgtACuQMPNkDMzibO-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="DlZdcZgpf0tY84U8qavR-7" target="DlZdcZgpf0tY84U8qavR-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="174" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3cBgtACuQMPNkDMzibO-4" value="Gestionar y Resolver Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="a3cBgtACuQMPNkDMzibO-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.2871" y="-2" relative="1" as="geometry">
+            <mxPoint y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3cBgtACuQMPNkDMzibO-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="DlZdcZgpf0tY84U8qavR-10" target="DlZdcZgpf0tY84U8qavR-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="622" y="200" />
+              <mxPoint x="400" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3cBgtACuQMPNkDMzibO-6" value="Clasificación y Análisis de Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="a3cBgtACuQMPNkDMzibO-5" vertex="1" connectable="0">
+          <mxGeometry x="-0.702" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Container: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Interfaz de Usuario de OTRS" technology="Interfaz Web" description="Permite a los clientes y usuarios de soporte ver, crear y gestionar tickets." id="Kiz3ze_mVOzW_uqPoHn--3">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3B8CD2;fontColor=#FFFFFF;strokeColor=#2F6FA6;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="-241" y="665" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Container: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Backend de OTRS" technology="Perl" description="Procesa y gestiona las operaciones internas de los tickets." id="Kiz3ze_mVOzW_uqPoHn--4">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3B8CD2;fontColor=#FFFFFF;strokeColor=#2F6FA6;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="21" y="665" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Container: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Databricks" technology="Apache Spark, scikit-learn, TF-IDF Vectorizer, Multinomial Naive Bayes" description="Clasifica los tickets con un modelo de machine learning para asignar una categoría." id="Kiz3ze_mVOzW_uqPoHn--6">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3B8CD2;fontColor=#FFFFFF;strokeColor=#2F6FA6;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="604" y="665" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="-61" y="724.9400000000002" as="sourcePoint" />
+            <mxPoint x="21" y="724.9400000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--8" value="Crear y&amp;nbsp;&lt;div&gt;Actualizar&lt;div&gt;&amp;nbsp;Tickets&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Kiz3ze_mVOzW_uqPoHn--7" vertex="1" connectable="0">
+          <mxGeometry x="-0.7955" y="3" relative="1" as="geometry">
+            <mxPoint x="27" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="201" y="724.92" as="sourcePoint" />
+            <mxPoint x="301" y="724.92" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--11" value="Almacenar y&amp;nbsp;&lt;div&gt;Consultar&amp;nbsp;&lt;/div&gt;&lt;div&gt;Tickets&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Kiz3ze_mVOzW_uqPoHn--10" vertex="1" connectable="0">
+          <mxGeometry x="-0.7955" y="3" relative="1" as="geometry">
+            <mxPoint x="33" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="880" y="520" as="sourcePoint" />
+            <mxPoint x="997" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--15" value="Almacenar y&amp;nbsp;&lt;div&gt;Consultar&amp;nbsp;&lt;/div&gt;&lt;div&gt;Tickets&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Kiz3ze_mVOzW_uqPoHn--14" vertex="1" connectable="0">
+          <mxGeometry x="-0.7955" y="3" relative="1" as="geometry">
+            <mxPoint x="38" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="481" y="694.9999999999998" as="sourcePoint" />
+            <mxPoint x="604" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--17" value="Enviar&amp;nbsp;&lt;div&gt;Clasificación&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Kiz3ze_mVOzW_uqPoHn--16" vertex="1" connectable="0">
+          <mxGeometry x="-0.7955" y="3" relative="1" as="geometry">
+            <mxPoint x="38" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" parent="1" source="Kiz3ze_mVOzW_uqPoHn--6" target="zyepxjSk0z5-UPm8dW1Z-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="491" y="704.9999999999998" as="sourcePoint" />
+            <mxPoint x="653.9999999999998" y="704.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kiz3ze_mVOzW_uqPoHn--20" value="Devolver&lt;div&gt;Clasificación&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Kiz3ze_mVOzW_uqPoHn--19" vertex="1" connectable="0">
+          <mxGeometry x="-0.7955" y="3" relative="1" as="geometry">
+            <mxPoint x="-57" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.333;exitY=0.023;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="zyepxjSk0z5-UPm8dW1Z-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200.04" y="1404.0000000000002" as="sourcePoint" />
+            <mxPoint x="200.04" y="1326.4" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-16" value="Guardar Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-14" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Creación de Tickets" technology="Perl" description="Maneja la lógica para la creación de nuevos tickets, asegurando que los datos del ticket sean válidos y se almacenen correctamente en la base de datos." id="zyepxjSk0z5-UPm8dW1Z-2">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="110" y="1404" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Gestión de Tickets" technology="Perl" description="Permite a los usuarios de soporte realizar operaciones en los tickets existentes, como cambiar el estado, reasignar o añadir comentarios." id="zyepxjSk0z5-UPm8dW1Z-4">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="310" y="1404" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Conexión con Databricks" technology="Perl" description="Prepara los datos del ticket y los envía al servicio de Databricks para su clasificación automática." id="zyepxjSk0z5-UPm8dW1Z-5">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="540" y="1404" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;[Container]&lt;/font&gt;" placeholders="1" name="Databricks" id="zyepxjSk0z5-UPm8dW1Z-7">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#828282;fillColor=none;fontColor=#404040;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=bottom;dashed=1;strokeWidth=2;perimeterSpacing=0;spacing=4;spacingTop=0;fontSize=10;container=0;rotatable=0;metaEdit=1;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="84" y="1610" width="896" height="180" as="geometry">
+              <mxRectangle x="560" y="40" width="110" height="30" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Consulta de Tickets" technology="Perl" description="Proporciona funciones para buscar y consultar tickets, permitiendo a los usuarios revisar los tickets." id="zyepxjSk0z5-UPm8dW1Z-6">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="770" y="1404" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Preprocesamiento de Datos" technology="TF-IDF Vectorizer en Python" description="Convierte el texto de los tickets en representaciones numéricas mediante TF-IDF, preparándolo para el modelo de clasificación." id="zyepxjSk0z5-UPm8dW1Z-8">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="114" y="1640" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Clasificación de datos" technology="Multinomial Naive Bayes implementado con scikit-learn" description="Clasifica los tickets en categorías predefinidas usando un modelo de machine learning basado en Multinomial Naive Bayes." id="zyepxjSk0z5-UPm8dW1Z-9">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="386" y="1640" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;[Component: %technology%]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Gestión de Resultados" technology="Apache Spark y scikit-learn" description="Organiza y devuelve los resultados de la clasificación al Backend de OTRS." id="zyepxjSk0z5-UPm8dW1Z-10">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="680" y="1640" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; font-size: 12px ; white-space: normal&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Container: %technology%]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;font style=&quot;line-height: 9.6px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;%description%&lt;/div&gt;" placeholders="1" name="Base de Datos de OTRS" description="Almacena los datos de los tickets." technology="MariaDB" id="zyepxjSk0z5-UPm8dW1Z-12">
+          <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;strokeColor=#2F6FA6;strokeWidth=1;fillColor=#3B8CD2;fontSize=9;fontColor=#000000;align=center;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="301" y="665" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; font-size: 12px ; white-space: normal&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Container: %technology%]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;font style=&quot;line-height: 9.6px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;%description%&lt;/div&gt;" placeholders="1" name="Base de Datos de OTRS" description="Almacena los datos de los tickets." technology="MariaDB" id="zyepxjSk0z5-UPm8dW1Z-13">
+          <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;strokeColor=#2F6FA6;strokeWidth=1;fillColor=#3B8CD2;fontSize=9;fontColor=#000000;align=center;resizable=0;rotatable=0;metaEdit=1;" parent="1" vertex="1">
+            <mxGeometry x="110" y="1210" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="zyepxjSk0z5-UPm8dW1Z-5" target="zyepxjSk0z5-UPm8dW1Z-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810.04" y="1657.6000000000001" as="sourcePoint" />
+            <mxPoint x="810.04" y="1580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="1580" />
+              <mxPoint x="204" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-19" value="Enviar para Clasificación" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-18" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint x="49" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.544;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="zyepxjSk0z5-UPm8dW1Z-6" target="zyepxjSk0z5-UPm8dW1Z-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650.04" y="1340.0000000000002" as="sourcePoint" />
+            <mxPoint x="650.04" y="1262.4" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="860" y="1275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-21" value="Consultar Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-20" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint x="265" y="75" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="zyepxjSk0z5-UPm8dW1Z-8" target="zyepxjSk0z5-UPm8dW1Z-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380.03999999999996" y="1907.6000000000001" as="sourcePoint" />
+            <mxPoint x="380.03999999999996" y="1830" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-23" value="Preprocesar&amp;nbsp;&lt;div&gt;Datos&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-22" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint x="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.333;entryY=0.993;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1050" y="1270" as="sourcePoint" />
+            <mxPoint x="1050.04" y="1160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1050.1" y="1210.84" />
+              <mxPoint x="1050.1" y="1210.84" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-25" value="Guardar Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-24" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="zyepxjSk0z5-UPm8dW1Z-9" target="zyepxjSk0z5-UPm8dW1Z-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540.04" y="1927.6000000000001" as="sourcePoint" />
+            <mxPoint x="540.04" y="1850" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-27" value="Resultado de&amp;nbsp;&lt;div&gt;Clasificación&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-26" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint x="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.685;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="zyepxjSk0z5-UPm8dW1Z-10" target="zyepxjSk0z5-UPm8dW1Z-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750.04" y="1927.6000000000001" as="sourcePoint" />
+            <mxPoint x="750.04" y="1850" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="770" y="1550" />
+              <mxPoint x="663" y="1550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-29" value="Devolver Clasificación" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-28" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint x="35" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.993;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.458;exitY=0.019;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="412.70000000000005" y="1405.98" as="sourcePoint" />
+            <mxPoint x="289" y="1275.3" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="411.26" y="1405.7" />
+              <mxPoint x="411.26" y="1275.7" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zyepxjSk0z5-UPm8dW1Z-36" value="Actualizar/Consultar Ticket" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zyepxjSk0z5-UPm8dW1Z-35" vertex="1" connectable="0">
+          <mxGeometry x="0.1259" relative="1" as="geometry">
+            <mxPoint x="14" y="75" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
